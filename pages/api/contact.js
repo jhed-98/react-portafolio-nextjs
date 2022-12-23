@@ -4,7 +4,7 @@
 //   console.log(req.body);
 //   // res.status(200).json({ name: 'John Doe' })
 // }
-import { mailOptions, transporter }  from "../../config/Nodemailer";
+import { mailOptions, transporter }  from "../../config/nodemailer";
 import validator from "validator"; 
 
 const CONTACT_MESSAGE_FIELDS = {
