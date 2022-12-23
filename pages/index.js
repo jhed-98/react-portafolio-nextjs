@@ -4,12 +4,12 @@ import styles from "../styles/Home.module.css";
 import { useState } from "react";
 import { BsFillMoonStarsFill } from "react-icons/bs";
 
-import Navigation from "./Navigation";
-import Slider from "./Slider";
-import Services from "./Services";
+import Navigation from "./navigation";
+import Slider from "./slider";
+import Services from "./services";
 import Work from "./work";
-import Contact from "./Contact";
-import Footer from "./Footer";
+import Contact from "./contact";
+import Footer from "./footer";
 
 const inter = Inter({ subsets: ["latin"] });
 

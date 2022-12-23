@@ -4,7 +4,7 @@ import Image from "next/image";
 import LenguajeSelector from "../components/LenguajeSelector";
 import Link from "next/link";
 
-export default function Navigation({ setDarkMode, darkMode }) {
+export default function navigation({ setDarkMode, darkMode }) {
   return (
     <nav className="bg-white dark:bg-gray-900 border-b py-2 border-gray-100 shadow fixed top-0 z-[200] w-full">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
