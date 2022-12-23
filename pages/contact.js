@@ -6,8 +6,7 @@ import {
   FormLabel,
   Input,
   Text,
-  Textarea,
-  useToast,
+  Textarea, 
 } from "@chakra-ui/react";
 import React, { useState } from "react";
 import { sendContactForm } from "../lib/api";
@@ -25,8 +24,7 @@ const initValues = {
 
 const initState = { values: initValues };
 
-const contact = () => {
-  const toast = useToast();
+const Contact = () => { 
 
   const [state, setState] = useState(initState);
 
@@ -228,4 +226,4 @@ const contact = () => {
   );
 };
 
-export default contact;
+export default Contact;

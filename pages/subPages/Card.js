@@ -1,16 +1,22 @@
-import Link from "next/link.js";
+import Link from "next/link";
 import React from "react";
-import { Github } from "../../components/AllSvgs.js";
+import Image from "next/image";
+import { Github } from "../../components/AllSvgs";
 
 export const Card = (props) => {
-  const { id, name, description, tags, demo, github } = props.data;
-
+  const { id, imgSrc, name, description, tags, demo, github } = props.data;
+console.log(imgSrc);
   return (
-    <div  key={id} className="w-full max-w-sm bg-white rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-200">
+    <div
+      key={id}
+      className="w-full max-w-sm bg-white rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-200"
+    >
       <a href="#">
-        <img
+        <Image
+          src={imgSrc}
+          width={500}
+          height={500}
           className="p-8 rounded-t-lg"
-          src="https://cdn.pixabay.com/photo/2016/09/30/19/10/ecommerce-1706103_960_720.png"
           alt="product image"
         />
       </a>
@@ -23,10 +29,13 @@ export const Card = (props) => {
         <div className="flex flex-wrap items-center my-5">
           {tags.map((t, id) => {
             return (
-              <span  key={id} className="bg-blue-100 text-blue-800 text-xs font-semibold rounded dark:bg-blue-200 dark:text-blue-800 px-2.5 py-0.5 ml-3 my-1">
+              <span
+                key={id}
+                className="bg-blue-100 text-blue-800 text-xs font-semibold rounded dark:bg-blue-200 dark:text-blue-800 px-2.5 py-0.5 ml-3 my-1"
+              >
                 # {t}
               </span>
-            ); 
+            );
           })}
         </div>
         <div className="flex items-center justify-between">
